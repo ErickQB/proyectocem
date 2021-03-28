@@ -50,7 +50,6 @@ class ItemCRUD extends CI_Controller {
    {
       $item = $this->itemCRUD->find_item($id);
 
-
       $this->load->view('theme/header');
       $this->load->view('itemCRUD/show',array('item'=>$item));
       $this->load->view('theme/footer');
@@ -77,9 +76,9 @@ class ItemCRUD extends CI_Controller {
    */
    public function store()
    {
-        $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('description', 'Description', 'required');
-
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+        $this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
+        $this->form_validation->set_rules('id_grado', 'ID_Grado', 'required');
 
         if ($this->form_validation->run() == FALSE){
             $this->session->set_flashdata('errors', validation_errors());
@@ -114,8 +113,9 @@ class ItemCRUD extends CI_Controller {
    */
    public function update($id)
    {
-        $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('description', 'Description', 'required');
+     $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+     $this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
+     $this->form_validation->set_rules('id_grado', 'ID_Grado', 'required');
 
 
         if ($this->form_validation->run() == FALSE){

@@ -26,9 +26,9 @@
           <td><?php echo $item->Nombre; ?></td>
           <td><?php echo $item->Descripcion; ?></td>
       <td>
+        <a class="btn btn-info" href="<?php echo base_url('itemCRUD/'.$item->ID_Materia) ?>"> Mostrar</a></br>
+        <a class="btn btn-primary" href="<?php echo base_url('itemCRUD/edit/'.$item->ID_Materia) ?>"> Editar</a></br>
         <form method="DELETE" action="<?php echo base_url('itemCRUD/delete/'.$item->ID_Materia);?>">
-          <a class="btn btn-info" href="<?php echo base_url('itemCRUD/'.$item->ID_Materia) ?>"> Mostrar</a>
-         <a class="btn btn-primary" href="<?php echo base_url('itemCRUD/edit/'.$item->ID_Materia) ?>"> Editar</a>
           <button type="submit" class="btn btn-danger"> Eliminar</button>
         </form>
       </td>
