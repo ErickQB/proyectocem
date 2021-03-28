@@ -27,7 +27,7 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Otro</a></li>
+      <li><a href="#">Configuraciones</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           Sesion <b class="caret"></b>
