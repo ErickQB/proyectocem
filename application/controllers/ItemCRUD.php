@@ -35,6 +35,7 @@ class ItemCRUD extends CI_Controller {
 
 
        $this->load->view('theme/header');
+       //$this->load->view('theme/lateralnav');
        $this->load->view('itemCRUD/list',$data);
        $this->load->view('theme/footer');
        $this->load->helper('url');

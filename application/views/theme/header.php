@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>Reportes CEM</title>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/footer.css');?>">
     <nav class="navbar navbar-default" role="navigation">
