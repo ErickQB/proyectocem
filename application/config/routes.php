@@ -60,3 +60,27 @@ $route['itemCRUDCreate']['post'] = "itemCRUD/store";
 $route['itemCRUDEdit/(:any)'] = "itemCRUD/edit/$1";
 $route['itemCRUDUpdate/(:any)']['put'] = "itemCRUD/update/$1";
 $route['itemCRUDDelete/(:any)']['delete'] = "itemCRUD/delete/$1";
+
+// Ruta Profesor
+$route['Profesor'] = "Profesor/index";
+$route['Profesor/(:num)'] = "Profesor/show/$1";
+$route['ProfesorCreate']['post'] = "Profesor/store";
+$route['ProfesorEdit/(:any)'] = "Profesor/edit/$1";
+$route['ProfesorUpdate/(:any)']['put'] = "Profesor/update/$1";
+$route['ProfesorDelete/(:any)']['delete'] = "Profesor/delete/$1";
+
+// Ruta Grado
+$route['Grado'] = "Grado/index";
+$route['Grado/(:num)'] = "Grado/show/$1";
+$route['GradoCreate']['post'] = "Grado/store";
+$route['GradoEdit/(:any)'] = "Grado/edit/$1";
+$route['GradoUpdate/(:any)']['put'] = "Grado/update/$1";
+$route['GradoDelete/(:any)']['delete'] = "Grado/delete/$1";
+
+// Ruta Encargado
+$route['Encargado'] = "Encargado/index";
+$route['Encargado/(:num)'] = "Encargado/show/$1";
+$route['EncargadoCreate']['post'] = "Encargado/store";
+$route['EncargadoEdit/(:any)'] = "Encargado/edit/$1";
+$route['EncargadoUpdate/(:any)']['put'] = "Encargado/update/$1";
+$route['EncargadoDelete/(:any)']['delete'] = "Encargado/delete/$1";
