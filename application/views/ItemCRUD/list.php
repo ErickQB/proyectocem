@@ -4,20 +4,21 @@
             <h2>Listado de Materias</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="<?php echo base_url('itemCRUD/create/');?>">Nuevo</a>
+            <a class="btn btn-success" href="<?php echo base_url('itemCRUD/create/');?>"><span class="glyphicon glyphicon-plus"></span> Nuevo</a>
         </div>
     </div>
 </div>
 
 
-<table class="table table-bordered">
+<table id="tablaP" class="table table-striped table-bordered" style="width:100%">
   <thead>
       <tr>
           <th>ID</th>
           <th>Nombre</th>
           <th>Descripcion</th>
           <th>Grado</th>
-          <th width="220px">Opciones</th>
+          <th width="250px" style="text-align:center">Opciones</th>
+          <th width="50px" style="text-align:center">Acciones</th>
       </tr>
   </thead>
   <tbody>
@@ -28,10 +29,15 @@
           <td><?php echo $item->Descripcion; ?></td>
           <td><?php echo $item->ID_Grado; ?></td>
       <td>
-        <a class="btn btn-info" href="<?php echo base_url('itemCRUD/'.$item->ID_Materia) ?>"> Mostrar</a></br>
-        <a class="btn btn-primary" href="<?php echo base_url('itemCRUD/edit/'.$item->ID_Materia) ?>"> Editar</a></br>
+        <div class="btn-group">
+          <a class="btn btn-info btn-sm" href="<?php echo base_url('itemCRUD/'.$item->ID_Materia) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
+          <a class="btn btn-success btn-sm" href="<?php echo base_url('itemCRUD/'.$item->ID_Materia) ?>"> <span class="glyphicon glyphicon-user"></span> Alumno</a>
+          <a class="btn btn-primary btn-sm" href="<?php echo base_url('itemCRUD/edit/'.$item->ID_Materia) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
+        </div>
+      </td>
+      <td>
         <form method="DELETE" action="<?php echo base_url('itemCRUD/delete/'.$item->ID_Materia);?>">
-          <button type="submit" class="btn btn-danger"> Eliminar</button>
+          <button type="submit" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"> Eliminar</button>
         </form>
       </td>
       </tr>
@@ -40,3 +46,11 @@
 
 
 </table>
+
+<script>
+  $(document).ready(function() {
+      $('#tablaP').DataTable({
+        "order": [[ 1, "asc" ]]
+      });
+  } );
+</script>

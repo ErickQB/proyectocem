@@ -4,11 +4,10 @@
             <h2>Nuevo Grado</h2>
         </div>
         <div class="pull-right">
-          <a class="btn btn-primary" href="<?php echo base_url('Grado');?>"> Back</a>
+          <a class="btn btn-primary" href="<?php echo base_url('Grado');?>"> Regresar</a>
         </div>
     </div>
 </div>
-
 
 <form method="post" action="<?php echo base_url('Grado/store');?>">
     <?php

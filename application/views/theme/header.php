@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/footer.css');?>">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap.min.js"></script>
     <nav class="navbar navbar-default" role="navigation">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
@@ -25,8 +28,9 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="<?php echo base_url('ItemCRUD')?>">Actividad</a></li>
-      <li><a href="#">Reportes</a></li>
+      <li><a href="<?php echo base_url('Profesor')?>">Profesor</a></li>
+      <li><a href="<?php echo base_url('Grado')?>">Grado</a></li>
+      <li><a href="<?php echo base_url('Encargado')?>">Padres</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">

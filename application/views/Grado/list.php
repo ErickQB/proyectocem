@@ -31,7 +31,8 @@
         <a class="btn btn-info" href="<?php echo base_url('Grado/'.$item->ID_Grado) ?>"> Mostrar</a></br>
         <a class="btn btn-primary" href="<?php echo base_url('Grado/edit/'.$item->ID_Grado) ?>"> Editar</a></br>
         <form method="DELETE" action="<?php echo base_url('Grado/delete/'.$item->ID_Grado);?>">
-          <button type="submit" class="btn btn-danger"> Eliminar</button>
+        <button type="submit" class="btn btn-danger"> Eliminar</button>
+          
         </form>
       </td>
       </tr>
