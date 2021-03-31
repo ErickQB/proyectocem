@@ -25,8 +25,9 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="<?php echo base_url('ItemCRUD')?>">Actividad</a></li>
-      <li><a href="#">Reportes</a></li>
+      <li class="active"><a href="<?php echo base_url('Profesor')?>">Profesor</a></li>
+      <li><a href="<?php echo base_url('Grado')?>">Grado</a></li>
+      <li><a href="<?php echo base_url('Encargado')?>">Padres</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
