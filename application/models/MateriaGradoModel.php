@@ -11,6 +11,11 @@ class MateriaGradoModel extends CI_Model{
         return $query->result();
     }
 
+    public function get_MateriaGradoId($id){
+          $query = $this->db->get_where('materia', array('ID_Grado' => $id));
+          return $query->result();
+    }
+
     public function insert_item()
     {
         $data = array(

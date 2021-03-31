@@ -20,7 +20,7 @@ class MateriaGrado extends CI_Controller {
       $this->load->model('MateriaGradoModel');
 
 
-      $this->Grado = new MateriaGradoModel;
+      $this->MateriaGrado = new MateriaGradoModel;
    }
 
 
@@ -29,10 +29,11 @@ class MateriaGrado extends CI_Controller {
     *
     * @return Response
    */
-   public function index()
+   public function index($id)
    {
-       $data['data'] = $this->MateriaGrado->get_MateriaGrado();
-
+     
+      //$data['data'] = $this->MateriaGrado->get_MateriaGrado();
+      $data['data'] = $this->MateriaGrado->get_MateriaGradoId($id);
 
        $this->load->view('theme/header');
        //$this->load->view('theme/lateralnav');
