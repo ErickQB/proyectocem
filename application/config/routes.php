@@ -84,3 +84,5 @@ $route['EncargadoCreate']['post'] = "Encargado/store";
 $route['EncargadoEdit/(:any)'] = "Encargado/edit/$1";
 $route['EncargadoUpdate/(:any)']['put'] = "Encargado/update/$1";
 $route['EncargadoDelete/(:any)']['delete'] = "Encargado/delete/$1";
+
+$route['Materia'] = "Materia/index";
