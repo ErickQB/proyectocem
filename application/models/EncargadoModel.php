@@ -15,10 +15,10 @@ class EncargadoModel extends CI_Model{
     {
         $data = array(
             'Nombre' => $this->input->post('nombre'),
-            'Apellido' => $this->input->post('descripcion'),
-            'Correo' => $this->input->post('Correo'),
-            'Num_Telefono' => $this->input->post('Num_Telefono'),
-            'Observaciones' => $this->input->post('Observaciones')
+            'Apellido' => $this->input->post('apellido'),
+            'Correo' => $this->input->post('correo'),
+            'Num_Telefono' => $this->input->post('num_telefono'),
+            'Observaciones' => $this->input->post('observaciones')
         );
         return $this->db->insert('Encargado', $data);
     }
@@ -29,7 +29,7 @@ class EncargadoModel extends CI_Model{
           'Nombre' => $this->input->post('nombre'),
           'Apellido' => $this->input->post('apellido'),
           'Correo' => $this->input->post('correo'),
-          'Num_Telefono' => $this->input->post('num_Telefono'),
+          'Num_Telefono' => $this->input->post('num_telefono'),
           'Observaciones' => $this->input->post('observaciones')
         );
         if($id==0){

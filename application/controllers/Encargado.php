@@ -78,9 +78,9 @@ class Encargado extends CI_Controller {
    */
    public function store()
    {
-      //  $this->form_validation->set_rules('nombre', 'Nombre', 'required');
-      //  $this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
-        $this->form_validation->set_rules('id_encargado', 'ID_Encargado', 'required');
+       $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+       $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+       $this->form_validation->set_rules('correo', 'Correo', 'required');
 
         if ($this->form_validation->run() == FALSE){
             $this->session->set_flashdata('errors', validation_errors());
@@ -115,9 +115,12 @@ class Encargado extends CI_Controller {
    */
    public function update($id)
    {
-     //$this->form_validation->set_rules('nombre', 'Nombre', 'required');
-    // $this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
-     $this->form_validation->set_rules('id_encargado', 'ID_Encargado', 'required');
+     $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+     $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+      $this->form_validation->set_rules('correo', 'Correo', 'required');
+       $this->form_validation->set_rules('num_telefono', 'Num_Telefono', 'required');
+      $this->form_validation->set_rules('observaciones', 'Observaciones', 'required');
+     //$this->form_validation->set_rules('id_encargado', 'ID_Encargado', 'required');
 
 
         if ($this->form_validation->run() == FALSE){
