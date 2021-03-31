@@ -4,7 +4,7 @@
             <h2>Nuevo Encargado</h2>
         </div>
         <div class="pull-right">
-          <a class="btn btn-primary" href="<?php echo base_url('Encargado');?>"> Back</a>
+          <a class="btn btn-primary" href="<?php echo base_url('Encargado');?>"> Regresar </a>
         </div>
     </div>
 </div>

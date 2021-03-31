@@ -37,7 +37,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Correo:</strong>
-                <input type="text" name="correo" class="form-control"value="<?php echo $item->Correo; ?><">
+                <input type="text" name="correo" class="form-control"value="<?php echo $item->Correo; ?>">
             </div>
         </div>
 
