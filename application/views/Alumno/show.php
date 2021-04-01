@@ -14,7 +14,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>ID</strong>
-            <?php echo $item->ID_Encargado; ?>
+            <?php echo $item->ID_Alumno; ?>
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-  
+
 
 
 </div>

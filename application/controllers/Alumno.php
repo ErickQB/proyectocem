@@ -85,7 +85,7 @@ class Alumno extends CI_Controller {
             $this->session->set_flashdata('errors', validation_errors());
             redirect(base_url('Alumno/create'));
         }else{
-           $this->itemCRUD->insert_item();
+           $this->Alumno->insert_item();
            redirect(base_url('Alumno'));
         }
     }
