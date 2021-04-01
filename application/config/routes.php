@@ -104,6 +104,7 @@ $route['MateriaProfesorDelete/(:any)']['delete'] = "MateriaProfesor/delete/$1";
 // Ruta Materia Grado SECUNDARIA
 $route['MateriaGrado/(:num)'] = "MateriaGrado/index/$1";
 $route['MateriaGrado/show/(:num)'] = "MateriaGrado/show/$1";
+$route['MateriaGrado/create/(:num)'] = "MateriaGrado/create/$1";
 $route['MateriaGradoCreate']['post'] = "MateriaGrado/store";
 $route['MateriaGradoEdit/(:any)'] = "MateriaGrado/edit/$1";
 $route['MateriaGradoUpdate/(:any)']['put'] = "MateriaGrado/update/$1";

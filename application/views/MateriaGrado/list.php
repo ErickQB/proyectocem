@@ -11,10 +11,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-          <h2>Listado de Materia de</h2>;
+          <h2>Listado de Materia</h2>;
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="<?php echo base_url('MateriaGrado/create/');?>"><span class="glyphicon glyphicon-plus"></span> Nuevo</a>
+            <a class="btn btn-success"  href="<?php echo base_url('MateriaGrado/create'?>"><span class="glyphicon glyphicon-plus"></span> Nuevo</a>
         </div>
     </div>
 </div>

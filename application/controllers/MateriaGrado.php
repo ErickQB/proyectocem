@@ -63,10 +63,12 @@ class MateriaGrado extends CI_Controller {
     *
     * @return Response
    */
-   public function create()
+   public function create($id)
    {
+      echo $id;
+      die();
       $this->load->view('theme/header');
-      $this->load->view('MateriaGrado/create');
+      $this->load->view('MateriaGrado/create',array('item'=>$id));
       $this->load->view('theme/footer');
    }
 
