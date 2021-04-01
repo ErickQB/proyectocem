@@ -31,7 +31,7 @@ class Encargado extends CI_Controller {
    */
    public function index()
    {
-     echo "string";
+     
        $data['data'] = $this->Encargado->get_Encargado();
 
 

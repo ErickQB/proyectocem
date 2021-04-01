@@ -34,21 +34,21 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Correo</strong>
-                <textarea name="correo" class="form-control"></textarea>
+                <input type="text" name="correo" class="form-control"required></input>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Num_Telefono</strong>
-                <textarea name="num_telefono" class="form-control"></textarea>
+                <input type="text" name="num_telefono" class="form-control"required></input>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Observaciones</strong>
-                <textarea name="observaciones" class="form-control"></textarea>
+                <input type="text" name="observaciones" class="form-control"required></input>
             </div>
         </div>
 
