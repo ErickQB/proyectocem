@@ -46,7 +46,7 @@
       <td>
         <div class="btn-group">
           <a class="btn btn-info btn-sm" href="<?php echo base_url('Profesor/'.$item->ID_Profesor) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
-          <a class="btn btn-success btn-sm" href="<?php echo base_url('Profesor/'.$item->ID_Profesor) ?>"> <span class="glyphicon glyphicon-user"></span> Editar</a>
+          <a class="btn btn-success btn-sm" href="<?php echo base_url('Profesor/'.$item->ID_Profesor) ?>"> <span class="glyphicon glyphicon-user"> Editar</a>
           <a class="btn btn-primary btn-sm" href="<?php echo base_url('Profesor/edit/'.$item->ID_Profesor) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
         </div>
       </td>

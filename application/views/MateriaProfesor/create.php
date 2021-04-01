@@ -4,7 +4,7 @@
             <h2>Nuevo Materia Pofesor</h2>
         </div>
         <div class="pull-right">
-          <a class="btn btn-primary" href="<?php echo base_url('MateriaProfesor');?>" > Regresar</a>
+          <a class="btn btn-primary" href="<?php echo base_url('MateriaProfesor/1');?>" > Regresar</a>
         </div>
     </div>
 </div>

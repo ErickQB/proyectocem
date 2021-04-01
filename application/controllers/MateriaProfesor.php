@@ -84,7 +84,7 @@ class MateriaProfesor extends CI_Controller {
             $this->session->set_flashdata('errors', validation_errors());
             redirect(base_url('MateriaProfesor/create'));
         }else{
-           $this->itemCRUD->insert_item();
+           $this->MateriaProfesor->insert_item();
            redirect(base_url('MateriaProfesor'));
         }
     }

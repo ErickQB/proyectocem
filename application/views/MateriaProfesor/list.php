@@ -5,7 +5,7 @@
             <h2>Listado de Materias del profesor</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="<?php echo base_url('profesor_materia/create/');?>"><span class="glyphicon glyphicon-plus"></span>Nuevo</a>
+            <a class="btn btn-success" href="<?php echo base_url('MateriaProfesor/create/');?>"><span class="glyphicon glyphicon-plus"></span>Nuevo</a>
         </div>
     </div>
 </div>
@@ -31,13 +31,13 @@
 
       <td>
         <div class="btn-group">
-          <a class="btn btn-info btn-sm" href="<?php echo base_url('profesor_materia/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
-          <a class="btn btn-success btn-sm" href="<?php echo base_url('profesor_materia/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-user"></span> Editar</a>
-          <a class="btn btn-primary btn-sm" href="<?php echo base_url('profesor_materia/edit/'.$item->ID_ProfesorMateria) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
+          <a class="btn btn-info btn-sm" href="<?php echo base_url('MateriaProfesor/1/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
+          <a class="btn btn-success btn-sm" href="<?php echo base_url('MateriaProfesor/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-user"> Editar</a>
+          <a class="btn btn-primary btn-sm" href="<?php echo base_url('MateriaProfesor/update/'.$item->ID_ProfesorMateria) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
         </div>
       </td>
       <td>
-        <form method="DELETE" action="<?php echo base_url('profesor_materia/delete/'.$item->ID_ProfesorMateria);?>">
+        <form method="DELETE" action="<?php echo base_url('MateriaProfesor/delete/'.$item->ID_ProfesorMateria);?>">
           <button type="submit" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"> Eliminar</button>
         </form>
       </td>
