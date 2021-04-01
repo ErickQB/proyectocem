@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Nuevo Materia</h2>
+            <h2>Nueva Materia</h2>
         </div>
         <div class="pull-right">
-          <a class="btn btn-primary" href="<?php echo base_url('/code/');?>"> Regresar</a>
-        </div>
+          <a class="btn btn-primary" href="<?php echo base_url('GradoMateria/'.$item->ID_Grado);?>"> Regresar</a>
+
     </div>
 </div>
 
@@ -24,18 +24,19 @@
                 <input type="text" name="nombre" class="form-control" required>
             </div>
         </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Descripcion</strong>
                 <textarea name="descripcion" class="form-control"></textarea>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>ID_Materia</strong>
-                    <textarea name="ID_Materia" class="form-control"></textarea>
+
+          <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="form-group">
+                  <strong>ID_Grado</strong>
+                    <textarea name="ID_Grado" class="form-control"></textarea>
                 </div>
         </div>
-
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Crear</button>

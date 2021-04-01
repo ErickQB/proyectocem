@@ -31,7 +31,7 @@ class MateriaGrado extends CI_Controller {
    */
    public function index($id)
    {
-     
+
       //$data['data'] = $this->MateriaGrado->get_MateriaGrado();
       $data['data'] = $this->MateriaGrado->get_MateriaGradoId($id);
 
