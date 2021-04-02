@@ -65,10 +65,9 @@ class MateriaGrado extends CI_Controller {
    */
    public function create($id)
    {
-      echo $id;
-      die();
+      $data['id'] = $id;
       $this->load->view('theme/header');
-      $this->load->view('MateriaGrado/create',array('item'=>$id));
+      $this->load->view('MateriaGrado/create',$data);
       $this->load->view('theme/footer');
    }
 
@@ -78,7 +77,7 @@ class MateriaGrado extends CI_Controller {
     *
     * @return Response
    */
-   public function store()
+   public function store($id)
    {
         $this->form_validation->set_rules('nombre', 'Nombre', 'required');
         $this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
@@ -86,10 +85,10 @@ class MateriaGrado extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE){
             $this->session->set_flashdata('errors', validation_errors());
-            redirect(base_url('MateriaGrado/create'));
+            redirect(base_url('MateriaGrado/create/'.$id));
         }else{
            $this->MateriaGrado->insert_item();
-           redirect(base_url('MateriaGrado'));
+           redirect(base_url('MateriaGrado/'.$id));
         }
     }
 

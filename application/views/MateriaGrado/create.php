@@ -4,12 +4,12 @@
             <h2>Nueva Materia</h2>
         </div>
         <div class="pull-right">
-          <a class="btn btn-primary" href="<?php echo base_url('GradoMateria/'.$item->ID_Grado);?>"> Regresar</a>
+          <a class="btn btn-primary" href="<?php echo base_url('MateriaGrado/'.$id);?>"> Regresar</a>
 
     </div>
 </div>
 
-<form method="post" action="<?php echo base_url('MateriaGradoreate');?>">
+<form method="post" action="<?php echo base_url('MateriaGrado/store/'.$id);?>">
     <?php
       if ($this->session->flashdata('errors')){
           echo '<div class="alert alert-danger">';
@@ -32,9 +32,8 @@
             </div>
 
           <div class="col-xs-12 col-sm-12 col-md-12">
-              <div class="form-group">
-                  <strong>ID_Grado</strong>
-                    <textarea name="ID_Grado" class="form-control"></textarea>
+              <div class="form-group" hidden>
+                    <input name="id_grado" class="form-control" value="<?php echo $id;?>"></textarea>
                 </div>
         </div>
 
