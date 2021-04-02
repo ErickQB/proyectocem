@@ -10,7 +10,7 @@
 </div>
 
 
-<form method="post" action="<?php echo base_url('MateriaProfesor/update/'.$item->ID_ProfesorMateria);?>">
+<form method="post" action="<?php echo base_url('MateriaProfesor/update/'.$item->ID_ProfesorMateria.'/'.$item->ID_Profesor);?>">
     <?php
     if ($this->session->flashdata('errors')){
         echo '<div class="alert alert-danger">';
@@ -23,7 +23,7 @@
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
+            <div class="form-group" hidden>
                 <strong>ID del Profesor:</strong>
                 <input type="text" name="id_profesor" class="form-control" value="<?php echo $item->ID_Profesor; ?>">
             </div>

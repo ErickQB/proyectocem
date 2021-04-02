@@ -29,11 +29,11 @@ class MateriaGrado extends CI_Controller {
     *
     * @return Response
    */
-   public function index($id)
+   public function index($idMateria)
    {
 
-      //$data['data'] = $this->MateriaGrado->get_MateriaGrado();
-      $data['data'] = $this->MateriaGrado->get_MateriaGradoId($id);
+      $data['id'] = $idMateria;
+      $data['data'] = $this->MateriaGrado->get_MateriaGradoId($idMateria);
 
        $this->load->view('theme/header');
        //$this->load->view('theme/lateralnav');
@@ -115,11 +115,11 @@ class MateriaGrado extends CI_Controller {
     *
     * @return Response
    */
-   public function update($id)
+   public function update($id,$IDGrado)
    {
      $this->form_validation->set_rules('nombre', 'Nombre', 'required');
      $this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
-     $this->form_validation->set_rules('id_grado', 'ID_Grado', 'required');
+     //$this->form_validation->set_rules('id_grado', 'ID_Grado', 'required');
 
 
         if ($this->form_validation->run() == FALSE){
@@ -127,7 +127,7 @@ class MateriaGrado extends CI_Controller {
             redirect(base_url('MateriaGrado/edit/'.$id));
         }else{
           $this->MateriaGrado->update_item($id);
-          redirect(base_url('MateriaGrado'));
+          redirect(base_url('MateriaGrado/'.$IDGrado));
         }
    }
 

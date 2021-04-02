@@ -87,8 +87,9 @@ $route['EncargadoDelete/(:any)']['delete'] = "Encargado/delete/$1";
 
 // Ruta Alumno SECUNDARIA
 $route['Alumno/(:num)'] = "Alumno/index/$1";
+$route['Alumno/create/(:num)'] = "Alumno/create/$1";
 $route['Alumno/show/(:num)'] = "Alumno/show/$1";
-$route['AlumnoCreate']['post'] = "Alumno/store";
+$route['AlumnoCreate']['post'] = "Alumno/store/$1";
 $route['AlumnoEdit/(:any)'] = "Alumno/edit/$1";
 $route['AlumnoUpdate/(:any)']['put'] = "Alumno/update/$1";
 $route['AlumnoDelete/(:any)']['delete'] = "Alumno/delete/$1";
@@ -96,9 +97,10 @@ $route['AlumnoDelete/(:any)']['delete'] = "Alumno/delete/$1";
 // Ruta Materia Profesor SECUNDARIA
 $route['MateriaProfesor/(:num)'] = "MateriaProfesor/index/$1";
 $route['MateriaProfesor/show/(:num)'] = "MateriaProfesor/show/$1";
-$route['MateriaProfesorCreate']['post'] = "MateriaProfesor/store";
+$route['MateriaProfesor/create/(:num)'] = "MateriaProfesor/create/$1";
+$route['MateriaProfesorCreate']['post'] = "MateriaProfesor/store/$1";
 $route['MateriaProfesorEdit/(:any)'] = "MateriaProfesor/edit/$1";
-$route['MateriaProfesorUpdate/(:any)']['put'] = "MateriaProfesor/update/$1";
+$route['MateriaProfesorUpdate/(:any)/(:any)']['put'] = "MateriaProfesor/update/$1/$1";
 $route['MateriaProfesorDelete/(:any)']['delete'] = "MateriaProfesor/delete/$1";
 
 // Ruta Materia Grado SECUNDARIA
@@ -107,5 +109,5 @@ $route['MateriaGrado/show/(:num)'] = "MateriaGrado/show/$1";
 $route['MateriaGrado/create/(:num)'] = "MateriaGrado/create/$1";
 $route['MateriaGradoCreate']['post'] = "MateriaGrado/store";
 $route['MateriaGradoEdit/(:any)'] = "MateriaGrado/edit/$1";
-$route['MateriaGradoUpdate/(:any)']['put'] = "MateriaGrado/update/$1";
+$route['MateriaGradoUpdate/(:any)']['put'] = "MateriaGrado/update/$1/$1";
 $route['MateriaGradoDelete/(:any)']['delete'] = "MateriaGrado/delete/$1";

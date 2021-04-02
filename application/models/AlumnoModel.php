@@ -11,12 +11,18 @@ class AlumnoModel extends CI_Model{
         return $query->result();
     }
 
+    public function get_AlumnoID($id){
+      $query = $this->db->get_where('Alumno', array('ID_Encargado' => $id));
+      return $query->result();
+    }
+
     public function insert_item()
     {
         $data = array(
             'Nombre' => $this->input->post('nombre'),
             'Apellido' => $this->input->post('apellido'),
-            'Correo' => $this->input->post('correo')
+            'Correo' => $this->input->post('correo'),
+            'ID_Encargado' => $this->input->post('id_encargado')
         );
         return $this->db->insert('Alumno', $data);
     }

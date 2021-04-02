@@ -29,11 +29,10 @@ class Alumno extends CI_Controller {
     *
     * @return Response
    */
-   public function index()
+   public function index($id)
    {
-       $data['data'] = $this->Alumno->get_Alumno();
-
-
+       $data['data'] = $this->Alumno->get_AlumnoID($id);
+       $data['id'] = $id;
        $this->load->view('theme/header');
        //$this->load->view('theme/lateralnav');
        $this->load->view('Alumno/list',$data);
@@ -62,10 +61,11 @@ class Alumno extends CI_Controller {
     *
     * @return Response
    */
-   public function create()
+   public function create($id)
    {
+      $data['id'] = $id;
       $this->load->view('theme/header');
-      $this->load->view('Alumno/create');
+      $this->load->view('Alumno/create',$data);
       $this->load->view('theme/footer');
    }
 
@@ -75,7 +75,7 @@ class Alumno extends CI_Controller {
     *
     * @return Response
    */
-   public function store()
+   public function store($id)
    {
         $this->form_validation->set_rules('nombre', 'Nombre', 'required');
         $this->form_validation->set_rules('apellido', 'Apellido', 'required');
@@ -83,10 +83,10 @@ class Alumno extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE){
             $this->session->set_flashdata('errors', validation_errors());
-            redirect(base_url('Alumno/create'));
+            redirect(base_url('Alumno/create'.$id));
         }else{
            $this->Alumno->insert_item();
-           redirect(base_url('Alumno'));
+           redirect(base_url('Alumno/'.$id));
         }
     }
 

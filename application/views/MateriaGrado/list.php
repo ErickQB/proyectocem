@@ -14,7 +14,7 @@
           <h2>Listado de Materia</h2>;
         </div>
         <div class="pull-right">
-            <a class="btn btn-success"  href="<?php echo base_url('MateriaGrado/create'?>"><span class="glyphicon glyphicon-plus"></span> Nuevo</a>
+            <a class="btn btn-success"  href="<?php echo base_url('MateriaGrado/create/'); ?>"><span class="glyphicon glyphicon-plus"></span> Nuevo</a>
         </div>
     </div>
 </div>
@@ -38,8 +38,7 @@
           <td><?php echo $item->ID_Grado; ?></td>
       <td>
       <div class="btn-group">
-        <a class="btn btn-info btn-sm" href="<?php echo base_url('MateriaGrado/'.$item->ID_Materia) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
-        <a class="btn btn-success btn-sm" href="<?php echo base_url('MateriaGrado/'.$item->ID_Materia) ?>"> <span class="glyphicon glyphicon-user"></span> Grado</a>
+        <a class="btn btn-info btn-sm" href="<?php echo base_url('MateriaGrado/show/'.$item->ID_Materia) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
         <a class="btn btn-primary btn-sm" href="<?php echo base_url('MateriaGrado/edit/'.$item->ID_Materia) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
       </div>
     </td>

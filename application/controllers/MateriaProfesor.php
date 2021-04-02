@@ -32,7 +32,7 @@ class MateriaProfesor extends CI_Controller {
    public function index($id)
    {
        $data['data'] = $this->MateriaProfesor->get_MateriaProfesorid($id);
-
+       $data['id'] = $id;
 
        $this->load->view('theme/header');
        //$this->load->view('theme/lateralnav');
@@ -62,10 +62,11 @@ class MateriaProfesor extends CI_Controller {
     *
     * @return Response
    */
-   public function create()
+   public function create($id)
    {
+      $data['id'] = $id;
       $this->load->view('theme/header');
-      $this->load->view('MateriaProfesor/create');
+      $this->load->view('MateriaProfesor/create',$data);
       $this->load->view('theme/footer');
    }
 
@@ -75,17 +76,17 @@ class MateriaProfesor extends CI_Controller {
     *
     * @return Response
    */
-   public function store()
+   public function store($id)
    {
      $this->form_validation->set_rules('id_materia', 'ID_Materia', 'required');
      $this->form_validation->set_rules('id_profesor', 'ID_Profesor', 'required');
 
         if ($this->form_validation->run() == FALSE){
             $this->session->set_flashdata('errors', validation_errors());
-            redirect(base_url('MateriaProfesor/create'));
+            redirect(base_url('MateriaProfesor/create/'.$id));
         }else{
            $this->MateriaProfesor->insert_item();
-           redirect(base_url('MateriaProfesor'));
+           redirect(base_url('MateriaProfesor/'.$id));
         }
     }
 
@@ -111,10 +112,10 @@ class MateriaProfesor extends CI_Controller {
     *
     * @return Response
    */
-   public function update($id)
+   public function update($id,$IDprofesor)
    {
      $this->form_validation->set_rules('id_materia', 'ID_Materia', 'required');
-     $this->form_validation->set_rules('id_Profesor', 'ID_Profesor', 'required');
+     //$this->form_validation->set_rules('id_Profesor', 'ID_Profesor', 'required');
 
 
         if ($this->form_validation->run() == FALSE){
@@ -122,7 +123,7 @@ class MateriaProfesor extends CI_Controller {
             redirect(base_url('MateriaProfesor/edit/'.$id));
         }else{
           $this->MateriaProfesor->update_item($id);
-          redirect(base_url('MateriaProfesor'));
+          redirect(base_url('MateriaProfesor/'.$IDprofesor));
         }
    }
 

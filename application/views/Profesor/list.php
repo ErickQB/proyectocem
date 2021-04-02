@@ -3,8 +3,7 @@
 <div>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url('Grado');?>">Grado</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Materia</li>
+      <li class="breadcrumb-item active" aria-current="page">Profesores</li>
     </ol>
   </nav>
 </div>
@@ -31,7 +30,7 @@
           <th>Correo</th>
           <th>Nombre</th>
           <th>Apellido</th>
-          <th width="250px" style="text-align:center">Opciones</th>
+          <th width="260px" style="text-align:center">Opciones</th>
           <th width="50px" style="text-align:center">Acciones</th>
       </tr>
   </thead>
@@ -46,7 +45,7 @@
       <td>
         <div class="btn-group">
           <a class="btn btn-info btn-sm" href="<?php echo base_url('Profesor/'.$item->ID_Profesor) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
-          <a class="btn btn-success btn-sm" href="<?php echo base_url('Profesor/'.$item->ID_Profesor) ?>"> <span class="glyphicon glyphicon-user"> Editar</a>
+          <a class="btn btn-success btn-sm" href="<?php echo base_url('MateriaProfesor/'.$item->ID_Profesor) ?>"> <span class="glyphicon glyphicon-pencil"> Materias</a>
           <a class="btn btn-primary btn-sm" href="<?php echo base_url('Profesor/edit/'.$item->ID_Profesor) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
         </div>
       </td>

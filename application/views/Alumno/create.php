@@ -4,13 +4,13 @@
             <h2>Nuevo Alumno</h2>
         </div>
         <div class="pull-right">
-          <a class="btn btn-primary" href="/Code/"> Regresar</a>
+          <a class="btn btn-primary" href="<?php echo base_url('Alumno/'.$id);?>"> Regresar</a>
         </div>
     </div>
 </div>
 
 
-<form method="post" action="<?php echo base_url('Alumno');?>">
+<form method="post" action="<?php echo base_url('Alumno/store/'.$id);?>">
     <?php
       if ($this->session->flashdata('errors')){
           echo '<div class="alert alert-danger">';
@@ -46,5 +46,7 @@
         </div>
     </div>
 
-
+    <div class="form-group" hidden>
+        <input type="text" name="id_encargado" value="<?php echo $id ?>" class="form-control">
+    </div>
 </form>

@@ -1,8 +1,17 @@
 <!-- Encargado - Cuerpo -->
+
+<div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Padres</li>
+    </ol>
+  </nav>
+</div>
+
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Listado de Encargados</h2>
+            <h2>Listado de Padres</h2>
         </div>
         <div class="pull-right">
             <a class="btn btn-success" href="<?php echo base_url('Encargado/create/');?>">Nuevo</a>
@@ -38,7 +47,7 @@
           <td>
             <div class="btn-group">
               <a class="btn btn-info btn-sm" href="<?php echo base_url('Encargado/'.$item->ID_Encargado) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
-              <a class="btn btn-success btn-sm" href="<?php echo base_url('Encargado/'.$item->ID_Encargado) ?>"> <span class="glyphicon glyphicon-user"></span> Alumno</a>
+              <a class="btn btn-success btn-sm" href="<?php echo base_url('Alumno/'.$item->ID_Encargado) ?>"> <span class="glyphicon glyphicon-user"></span> Alumno</a>
               <a class="btn btn-primary btn-sm" href="<?php echo base_url('Encargado/edit/'.$item->ID_Encargado) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
             </div>
           </td>

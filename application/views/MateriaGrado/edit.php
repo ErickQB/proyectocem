@@ -10,7 +10,7 @@
 </div>
 
 
-<form method="post" action="<?php echo base_url('MateriaGrado/update/'.$item->ID_Materia);?>">
+<form method="post" action="<?php echo base_url('MateriaGrado/update/'.$item->ID_Materia.'/'.$item->ID_Grado);?>">
     <?php
     if ($this->session->flashdata('errors')){
         echo '<div class="alert alert-danger">';
@@ -32,9 +32,8 @@
                 <strong>Descripcion:</strong>
                 <textarea name="descripcion" class="form-control"><?php echo $item->Descripcion; ?></textarea>
             </div>
-            <div class="form-group">
-                <strong>ID_Materia:</strong>
-                <textarea name="descripcion" class="form-control"><?php echo $item->ID_Materia; ?></textarea>
+            <div class="form-group" hidden>
+                <textarea name="id_grado" class="form-control"><?php echo $item->ID_Grado; ?></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

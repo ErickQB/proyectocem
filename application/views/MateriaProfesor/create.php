@@ -4,13 +4,13 @@
             <h2>Nuevo Materia Pofesor</h2>
         </div>
         <div class="pull-right">
-          <a class="btn btn-primary" href="<?php echo base_url('MateriaProfesor/1');?>" > Regresar</a>
+          <a class="btn btn-primary" href="<?php echo base_url('MateriaProfesor/'.$id);?>" > Regresar</a>
         </div>
     </div>
 </div>
 
 
-<form method="post" action="<?php echo base_url('MateriaProfesorCreate');?>">
+<form method="post" action="<?php echo base_url('MateriaProfesor/store/'.$id);?>">
     <?php
       if ($this->session->flashdata('errors')){
           echo '<div class="alert alert-danger">';
@@ -20,9 +20,9 @@
     ?>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
+            <div class="form-group" hidden>
                 <strong>ID del Profesor:</strong>
-                <input type="text" name="id_profesor" class="form-control" required>
+                <input type="text" name="id_profesor" value="<?php echo $id?>" class="form-control" required>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

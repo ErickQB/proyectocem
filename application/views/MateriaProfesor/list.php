@@ -1,11 +1,21 @@
 <!-- fila y tablas -->
+
+<div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="<?php echo base_url('Profesor');?>">Profesores</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Materia</li>
+    </ol>
+  </nav>
+</div>
+
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Listado de Materias del profesor</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="<?php echo base_url('MateriaProfesor/create/');?>"><span class="glyphicon glyphicon-plus"></span>Nuevo</a>
+            <a class="btn btn-success" href="<?php echo base_url('MateriaProfesor/create/'.$id);?>"><span class="glyphicon glyphicon-plus"></span>Nuevo</a>
         </div>
     </div>
 </div>
@@ -31,8 +41,8 @@
 
       <td>
         <div class="btn-group">
-          <a class="btn btn-info btn-sm" href="<?php echo base_url('MateriaProfesor/1/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
-          <a class="btn btn-success btn-sm" href="<?php echo base_url('MateriaProfesor/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-user"> Editar</a>
+          <a class="btn btn-info btn-sm" href="<?php echo base_url('MateriaProfesor/show/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-star"></span> Mostrar</a>
+          <a class="btn btn-success btn-sm" href="<?php echo base_url('MateriaProfesor/edit/'.$item->ID_ProfesorMateria) ?>"> <span class="glyphicon glyphicon-user"> Editar</a>
           <a class="btn btn-primary btn-sm" href="<?php echo base_url('MateriaProfesor/update/'.$item->ID_ProfesorMateria) ?>"><span class="glyphicon glyphicon-pencil"> Editar</a>
         </div>
       </td>
@@ -54,3 +64,4 @@
         "order": [[ 1, "asc" ]]
       });
   } );
+</script>
