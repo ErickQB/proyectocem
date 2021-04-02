@@ -17,7 +17,6 @@
         echo $this->session->flashdata('errors');
         echo "</div>";
     }
-
     ?>
 
     <div class="row">
