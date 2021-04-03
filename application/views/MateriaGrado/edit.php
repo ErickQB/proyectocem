@@ -4,7 +4,7 @@
             <h2>Editar Materia</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="<?php echo base_url('MateriaGrado');?>"> Regresar</a>
+            <a class="btn btn-primary" href="<?php echo base_url('MateriaGrado/'.$item->ID_Grado);?>"> Regresar</a>
         </div>
     </div>
 </div>
@@ -39,6 +39,4 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
-
-
-</form>
+  </form>

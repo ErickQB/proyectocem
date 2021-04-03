@@ -56,5 +56,6 @@
       $('#tablaP').DataTable({
         "order": [[ 1, "asc" ]]
       });
+      $('#grado').addClass('active');
   } );
 </script>

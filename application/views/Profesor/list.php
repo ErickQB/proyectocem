@@ -66,5 +66,6 @@
       $('#tablaP').DataTable({
         "order": [[ 1, "asc" ]]
       });
+      $('#profesor').addClass('active');
   } );
   </script>

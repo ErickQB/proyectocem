@@ -5,8 +5,8 @@
         </div>
         <div class="pull-right">
           <a class="btn btn-primary" href="<?php echo base_url('MateriaGrado/'.$id);?>"> Regresar</a>
-
-    </div>
+        </div>
+      </div>
 </div>
 
 <form method="post" action="<?php echo base_url('MateriaGrado/store/'.$id);?>">
@@ -34,13 +34,12 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group" hidden>
                     <input name="id_grado" class="form-control" value="<?php echo $id;?>"></textarea>
-                </div>
-        </div>
+              </div>
+          </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Crear</button>
         </div>
+      </div>
     </div>
-
-
-</form>
+  </form>

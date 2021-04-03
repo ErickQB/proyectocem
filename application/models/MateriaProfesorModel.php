@@ -15,8 +15,13 @@ class MateriaProfesorModel extends CI_Model{
     }
 
     public function get_MateriaProfesorid($id){
-          $query = $this->db->get_where('profesor_materia', array('ID_Profesor' => $id));
-          return $query->result();
+        $this->db->select('*')->from('PROFESOR_MATERIA')
+                ->join('MATERIA','MATERIA.ID_Materia = PROFESOR_MATERIA.ID_Materia')
+                ->where('PROFESOR_MATERIA.ID_Profesor',$id);
+        $query = $this->db->get();
+        return $query->result();
+        //$query = $this->db->get_where('profesor_materia', array('ID_Profesor' => $id));
+        //return $query;
     }
 
 

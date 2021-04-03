@@ -28,9 +28,9 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="<?php echo base_url('Profesor')?>">Profesor</a></li>
-      <li><a href="<?php echo base_url('Grado')?>">Grado</a></li>
-      <li><a href="<?php echo base_url('Encargado')?>">Padres</a></li>
+      <li id="profesor"><a href="<?php echo base_url('Profesor')?>">Profesor</a></li>
+      <li id="grado"><a href="<?php echo base_url('Grado')?>">Grado</a></li>
+      <li id="padre"><a href="<?php echo base_url('Encargado')?>">Padres</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">

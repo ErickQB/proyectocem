@@ -24,19 +24,17 @@
 <table id="tablaP" class="table table-striped table-bordered" style="width:100%">
   <thead>
       <tr>
-          <th>ID</th>
-          <th>ID_Profesor</th>
-          <th>ID_Materia</th>
-          <th width="250px" style="text-align:center">Opciones</th>
+          <th>Materia</th>
+          <th width="270px" style="text-align:center">Opciones</th>
           <th width="50px" style="text-align:center">Acciones</th>
       </tr>
   </thead>
   <tbody>
    <?php foreach ($data as $item) { ?>
       <tr>
-          <td><?php echo $item->ID_ProfesorMateria; ?></td>
-          <td><?php echo $item->ID_Profesor; ?></td>
-          <td><?php echo $item->ID_Materia; ?></td>
+          <!-- <td><?php echo $item->ID_ProfesorMateria; ?></td>
+          <td><?php echo $item->ID_Profesor; ?></td> -->
+          <td><?php echo $item->Nombre; ?></td>
 
 
       <td>
@@ -63,5 +61,6 @@
       $('#tablaP').DataTable({
         "order": [[ 1, "asc" ]]
       });
+      $('#profesor').addClass('active');
   } );
 </script>
